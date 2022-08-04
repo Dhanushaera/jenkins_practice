@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  parameters {
+      string(name: 'Dhanush', description: 'Please tell me your name?')
+ 
+    }
   stages {
     stage('version') {
       steps {
@@ -11,11 +15,11 @@ pipeline {
         sh 'python3 hello.py'
       }
     }
-    stage('shell script') {
+    stage('Printing Parameters') {
       steps {
-        echo 'hello dhanush'
+          echo "Hello ${params.Dhanush}"
+      
      }
    }
   }
 }
-
