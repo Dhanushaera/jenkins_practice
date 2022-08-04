@@ -11,5 +11,8 @@ pipeline {
         sh 'python3 hello.py'
       }
     }
+    stage('shell script') {
+      steps {
+        echo 'hello dhanush'
   }
 }
