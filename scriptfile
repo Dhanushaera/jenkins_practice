@@ -12,7 +12,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 hello.py arg1 arg2 arg3'
+        sh 'python3 hello.py ${sys.argv[0]}'
       }
     }
     stage('Printing Parameters') {
