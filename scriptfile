@@ -17,7 +17,7 @@ pipeline {
     }
     stage('Printing Parameters') {
       steps {
-          echo "python commandline.py"
+          sh "python commandline.py"
       
      }
    }
